@@ -1,0 +1,10 @@
+.home-image {
+    background-image: url(/workspaces/Learn.Build.Initiative/Source Img/Home.png);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin: 20px auto;
+}
