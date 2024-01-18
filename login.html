@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>OSKIF Login </title>
+    <title> OSKIF | Login </title>
  
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
     *{
 font-family: 'Poppins',sans-serif;
 color: #ffffff;
@@ -15,7 +16,6 @@ letter-spacing: 0.5px;
 outline: none;
 border: none;
 }
-
 *:after{
 padding: 0;
 margin: 0;
@@ -82,7 +82,13 @@ font-weight: 500;
 line-height: 42px;
 text-align: center;
 }
-
+form h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 0;
+}
 label{
 display: block;
 margin-top: 30px;
@@ -104,11 +110,11 @@ font-weight: 300;
 color: #e5e5e5;
 }
 button{
-margin-top: 50px;
+margin-top: 40px;
 width: 100%;
 background-color: #ffffff;
 color: #080710;
-padding: 15px 0;
+padding: 15px 10px;
 font-size: 18px;
 font-weight: 600;
 border-radius: 5px;
@@ -118,23 +124,27 @@ cursor: pointer;
 margin-top: 30px;
 display: flex;
 }
+.social{
+  margin-top: 30px;
+  display: flex;
+}
 .social div{
-background: #ffffff;
-width: 150px;
-border-radius:3px;
-padding: 5px 10px 10px 5px;
-background-color:#080710(255,255,255,0.27);
-color: #080710;
-text-align: center;
+  background: red;
+  width: 150px;
+  border-radius:25px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
 }
 .social div:hover{
-background-color: rgba(255,255,255,0.47);
+  background-color: rgba(255,255,255,0.47);
 }
-.social i{
-margin-right: 4px;
+.social .zoho{
+  margin-left: 25px;
 }
-.social .go{
-margin-left: 2px;
+.social .SignUp{
+  margin-right: 10px;
 }
 </style>
 <body>
@@ -143,17 +153,21 @@ margin-left: 2px;
         <div class="shape"></div>
     </div>
     <form>
+        <img src="/Img/logo.png" alt="OSKIF" border="0" width="75" height="75" style="border-radius: 50%;">
         <h3>Login Here</h3>
 
-        <label for="username">Username</label>
+        <label for="username">Username or Email </label>
         <input type="text" placeholder="Email" id="username">
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <input class="pas" type="password" name="password" placeholder="············"/>
+        <ion-icon class="show-hide" name="eye-outline"></ion-icon>
 
         <button>Log In</button>
         <div class="social">
-          <div class="go"><i class="fab fa-Zoho"></i>Zoho</div>
+          <div class="zoho"><i class="fab fa-zoho"><a href="https://www.zoho.com/login.html"></i>Zoho📧</a></div>
+          <div class="SignUp"><i class="fab fa-signup"></i><a href="/signup.html">Sign Up🤝</a></div>
         </div>
     </form>
 </body>
