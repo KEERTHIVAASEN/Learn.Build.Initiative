@@ -3,16 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> OSKIF| Newsletter|</title>
+    <title> OSKIF | Newsletter |</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+<style>
+    body{
+        background-color: #f2f2f2;
+    }
+    .center-align{
+        text-align: center;
+        margin-top: 10px;
+    }
+    h1{
+        font-size: 50px;
+        color: #000;
+    }
+    p{
+        font-size: 20px;
+        color: #000;
+    }
+    input{
+        width: 25%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #000;
+        outline: none;
+        padding-left: 10px;
+    }
+    button{
+        width: 10%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #000;
+        outline: none;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+        padding-left: 10px;
+    }
+    button:hover{
+        background-color: #fff;
+        color: #000;
+    }
+</style>
 <body>
     <div class="center-align">
-        <img src="img/" alt="img">
+        <img src="/img/Home.png" alt="OSKIF" border="" width="50%" height="50%">
         <h1> OSKIF</h1>
+        <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;"><h2>Team , Launched 8 months ago</h2></p>
         <p>Subscribe to our newsletter</p>
-            <input type="email" id="emailInput" placeholder="Email">
-            <button id="subscribeButton">Subscribe</button>
+            <input type="email" placeholder="Email" id="username" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <button id="subscribeButton" onclick="subscribe()">Subscribe</button>
+            <script>
+                function subscribe() {
+                    var email = document.getElementById('username').value;
+                    var emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+                    if (!emailRegex.test(email)) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    } else {
+                        alert('Subscribed successfully! Thank you for subscribing to our newsletter');
+                    }
+                }
+            </script>
     </div>
 </body>
 </html>
