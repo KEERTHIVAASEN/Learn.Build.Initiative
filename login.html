@@ -156,8 +156,9 @@ display: flex;
         <img src="/img/logo.png" alt="OSKIF" border="0" width="75" height="75" style="border-radius: 50%;">
         <h3>Login Here</h3>
 
-        <label for="username">Username or Email </label>
-        <input type="text" placeholder="Email" id="username">
+        <label for="username"> Enter Email </label>
+        <ion-icon name="person-outline"></ion-icon>
+        <input type="email" placeholder="Email" id="username" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
 
         <label for="password">Password</label>
         <ion-icon name="lock-closed-outline"></ion-icon>
