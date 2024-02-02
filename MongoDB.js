@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const apiKey = 599a424f-6dc1-4b2d-bb73-60b997aac973;
+const apiKey ='599a424f-6dc1-4b2d-bb73-60b997aac973';
 const databaseName = OSKIF;
 
 const { MongoClient } = require('mongodb');

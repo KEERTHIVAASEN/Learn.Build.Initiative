@@ -172,9 +172,23 @@ display: flex;
         </div>
     </form>
 <script>
+  async function insertData() {
+    const db = client.db(OSKIF);
+    const collection = db.collection('your-collection-name');
+
+    // Insert a single document
+    const name = document.getElementById('username').value;
+    const age = document.getElementById('age').value;
+    const email = document.getElementById('email').value;
+    const document = { name, age, email };
+    await collection.insertOne(document);
+    console.log('Document inserted successfully');
+}
+// Call the insertData function to insert a document
+insertData();
   async function signIn(username, password) {
-    const db = client.db('your-database-name');
-    const usersCollection = db.collection('users');
+    const db = client.db(OSKIF);
+    const usersCollection = db.collection(admin);
 
     // Find the user by username
     const user = await usersCollection.findOne({ username });
