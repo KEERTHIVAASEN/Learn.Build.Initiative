@@ -171,5 +171,21 @@ display: flex;
           <div class="SignUp"><i class="fab fa-signup"></i><a href="/signup.html">Sign Up🤝</a></div>
         </div>
     </form>
+<script>
+  async function signIn(username, password) {
+    const db = client.db('your-database-name');
+    const usersCollection = db.collection('users');
+
+    // Find the user by username
+    const user = await usersCollection.findOne({ username });
+
+    // Compare the password (you should use a proper password hashing library)
+    if (user && user.password === password) {
+        console.log('User signed in successfully');
+    } else {
+        console.log('Invalid credentials');
+    }
+}
+</script>    
 </body>
 </html>

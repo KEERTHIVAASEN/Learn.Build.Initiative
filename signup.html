@@ -176,5 +176,17 @@ display: flex;
           <div class="SignUp"><i class="fab fa-signup"></i><a href="/login.html"> Login📨</a></div>
         </div>
     </form>
+<script>
+  async function signUp(username, password) {
+    const db = client.db('your-database-name');
+    const usersCollection = db.collection('users');
+
+    // Hash the password (you should use a proper password hashing library)
+    // Insert user data into the database
+    await usersCollection.insertOne({ username, passwordHash });
+
+    console.log('User signed up successfully');
+}
+</script>
 </body>
 </html>
